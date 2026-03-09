@@ -1,214 +1,215 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
-    <link href="veille.css" rel="stylesheet" />
-    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <title>Logan Quaghebeur — Veille Technologique</title>
+    <link rel="stylesheet" href="veille.css">
 </head>
 
 <body>
-    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
 
-    <nav class="bg-gray-900 border-gray-200">
-        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-            <a href="https://flowbite.com/" class="flex items-center gap-x-4">
-                <img class="w-14 h-14 rounded-full" src="../accueil/moi.png" alt="Rounded avatar">
-                <span class="text-2xl font-semibold text-white">Logan Quaghebeur</span>
-            </a>
-            <button data-collapse-toggle="navbar-default" type="button"
-                class="inline-flex items-center p-2 w-10 h-10 justify-center text-smçç rounded-lg md:hidden text-gray-400 hover:bg-gray-700 focus:ring-gray-600"
-                aria-controls="navbar-default" aria-expanded="false">
-                <span class="sr-only">Open main menu</span>
-                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                    viewBox="0 0 17 14">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M1 1h15M1 7h15M1 13h15" />
-                </svg>
-            </button>
+<nav class="navbar">
+    <div class="nav-inner">
+        <a href="../accueil/index.html" class="nav-brand">
+            <img class="nav-avatar" src="../accueil/moi.png" alt="Logan Quaghebeur">
+            <div class="nav-name-wrap">
+                <span class="nav-name">Logan Quaghebeur</span>
+                <span class="nav-role">sysadmin@bts-sio ~</span>
+            </div>
+        </a>
+        <ul class="nav-links">
+            <li><a href="../accueil/index.html" class="nav-link">profil</a></li>
+            <li><a href="../bts/bts.html" class="nav-link">bts</a></li>
+            <li><a href="../projets/projets.html" class="nav-link">projets</a></li>
+            <li><a href="#" class="nav-link active">veille</a></li>
+        </ul>
+    </div>
+</nav>
 
+<section class="page-hero">
+    <div class="page-hero-top">
+        <span>~/portfolio</span>
+        <span class="breadcrumb-sep">/</span>
+        <span style="color: var(--accent)">veille</span>
+    </div>
+    <h1 class="page-hero-title">Veille<br><span>Technologique</span></h1>
+    <p class="page-hero-desc">
+        Suivi des évolutions en virtualisation et conteneurisation — deux piliers fondamentaux de l'administration moderne des infrastructures IT.
+    </p>
+    <div class="hero-badges">
+        <span class="badge badge--accent">Virtualisation</span>
+        <span class="badge badge--cyan">Conteneurisation</span>
+        <span class="badge badge--green">● Veille active</span>
+        <span class="badge">Google Alertes</span>
+        <span class="badge">Feedly RSS</span>
+    </div>
+</section>
 
-            <div class="border-b border-gray-200 dark:border-gray-700">
-                <ul class="flex flex-wrap -mb-px text-sm font-medium text-center text-gray-500 dark:text-gray-400">
-                    <li class="me-2">
-                        <a href="../accueil/index.html"
-                        class="inline-flex items-center justify-center p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 group">
-                            <svg class="w-4 h-4 me-2 text-gray-400 group-hover:text-gray-500 dark:text-gray-500 dark:group-hover:text-gray-300"
-                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-                                viewBox="0 0 20 20">
-                                <path
-                                    d="M10 0a10 10 0 1 0 10 10A10.011 10.011 0 0 0 10 0Zm0 5a3 3 0 1 1 0 6 3 3 0 0 1 0-6Zm0 13a8.949 8.949 0 0 1-4.951-1.488A3.987 3.987 0 0 1 9 13h2a3.987 3.987 0 0 1 3.951 3.512A8.949 8.949 0 0 1 10 18Z" />
-                            </svg>Profile
-                        </a>
-                    </li>
-                    <li class="me-2">
-                        <a href="../bts/bts.html"
-                        class="inline-flex items-center justify-center p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 group"
-                            aria-current="page">
-                            <svg class="ww-4 h-4 me-2 text-gray-400 group-hover:text-gray-500 dark:text-gray-500 dark:group-hover:text-gray-300" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 18">
-                                <path
-                                    d="M6.143 0H1.857A1.857 1.857 0 0 0 0 1.857v4.286C0 7.169.831 8 1.857 8h4.286A1.857 1.857 0 0 0 8 6.143V1.857A1.857 1.857 0 0 0 6.143 0Zm10 0h-4.286A1.857 1.857 0 0 0 10 1.857v4.286C10 7.169 10.831 8 11.857 8h4.286A1.857 1.857 0 0 0 18 6.143V1.857A1.857 1.857 0 0 0 16.143 0Zm-10 10H1.857A1.857 1.857 0 0 0 0 11.857v4.286C0 17.169.831 18 1.857 18h4.286A1.857 1.857 0 0 0 8 16.143v-4.286A1.857 1.857 0 0 0 6.143 10Zm10 0h-4.286A1.857 1.857 0 0 0 10 11.857v4.286c0 1.026.831 1.857 1.857 1.857h4.286A1.857 1.857 0 0 0 18 16.143v-4.286A1.857 1.857 0 0 0 16.143 10Z" />
-                            </svg>BTS
-                        </a>
-                    </li>
-                    <li class="me-2">
-                        <a href="../projets/projets.html"
-                            class="inline-flex items-center justify-center p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 group">
-                            <svg class="ww-4 h-4 me-2 text-gray-400 group-hover:text-gray-500 dark:text-gray-500 dark:group-hover:text-gray-300"
-                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-                                viewBox="0 0 20 20">
-                                <path
-                                    d="M5 11.424V1a1 1 0 1 0-2 0v10.424a3.228 3.228 0 0 0 0 6.152V19a1 1 0 1 0 2 0v-1.424a3.228 3.228 0 0 0 0-6.152ZM19.25 14.5A3.243 3.243 0 0 0 17 11.424V1a1 1 0 0 0-2 0v10.424a3.227 3.227 0 0 0 0 6.152V19a1 1 0 1 0 2 0v-1.424a3.243 3.243 0 0 0 2.25-3.076Zm-6-9A3.243 3.243 0 0 0 11 2.424V1a1 1 0 0 0-2 0v1.424a3.228 3.228 0 0 0 0 6.152V19a1 1 0 1 0 2 0V8.576A3.243 3.243 0 0 0 13.25 5.5Z" />
-                            </svg>Projets
-                        </a>
-                    </li>
-                    <li class="me-2">
-                        <a href="../Veille/veille.html"
-                            class="inline-flex items-center justify-center p-4 text-blue-600 border-b-2 border-blue-600 rounded-t-lg active dark:text-blue-500 dark:border-blue-500 group">
-                            <svg class="w-4 h-4 me-2 text-blue-600 dark:text-blue-500"
-                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-                                viewBox="0 0 18 20">
-                                <path
-                                    d="M16 1h-3.278A1.992 1.992 0 0 0 11 0H7a1.993 1.993 0 0 0-1.722 1H2a2 2 0 0 0-2 2v15a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2Zm-3 14H5a1 1 0 0 1 0-2h8a1 1 0 0 1 0 2Zm0-4H5a1 1 0 0 1 0-2h8a1 1 0 1 1 0 2Zm0-5H5a1 1 0 0 1 0-2h2V2h4v2h2a1 1 0 1 1 0 2Z" />
-                            </svg>Veille
-                        </a>
-                    </li>
-                </ul>
+<section class="topic-section">
+    <div class="topic-inner">
+        <div>
+            <div class="block-label">// sujet de veille</div>
+            <h2 class="block-title">Virtualisation &amp; Conteneurisation</h2>
+            <div class="block-text">
+                <p>
+                    La <strong>virtualisation</strong> permet de diviser les ressources matérielles
+                    d'un seul ordinateur (processeurs, mémoire, stockage) en plusieurs machines virtuelles (VM),
+                    chacune exécutant son propre système d'exploitation de façon isolée.
+                </p>
+                <p>
+                    La <strong>conteneurisation</strong> consiste à regrouper le code logiciel avec
+                    uniquement les bibliothèques et dépendances nécessaires pour créer un exécutable léger —
+                    le <strong>conteneur</strong> — qui s'exécute de manière cohérente sur n'importe quelle infrastructure.
+                </p>
+            </div>
+        </div>
+        <div class="topic-img-wrap">
+            <img src="virt.png" alt="Virtualisation et conteneurisation">
+            <span class="topic-img-label">// virtualization.overview</span>
+        </div>
+    </div>
+</section>
+
+<section class="diff-section">
+    <div class="diff-inner">
+        <div class="diff-header">
+            <span class="diff-num">// 01</span>
+            <h2 class="diff-title">VM vs Conteneurs — Quelle différence ?</h2>
+        </div>
+        <div class="diff-grid">
+            <div>
+                <div class="diff-text">
+                    <p>
+                        Les <strong>machines virtuelles</strong> virtualisent toute une machine jusqu'aux couches
+                        matérielles, tandis que les <strong>conteneurs</strong> ne virtualisent que les couches logicielles
+                        au-dessus du niveau du système d'exploitation.
+                    </p>
+                </div>
+                <div class="diff-compare" style="margin-top:1.5rem">
+                    <div class="compare-row">
+                        <div class="compare-cell vm">
+                            <div class="compare-label vm">Machine Virtuelle</div>
+                            <div class="compare-val">OS complet inclus, isolation totale, démarrage en minutes</div>
+                        </div>
+                        <div class="compare-cell ct">
+                            <div class="compare-label ct">Conteneur</div>
+                            <div class="compare-val">Partage l'OS hôte, léger, démarrage en secondes</div>
+                        </div>
+                    </div>
+                    <div class="compare-row">
+                        <div class="compare-cell vm">
+                            <div class="compare-label vm">Ressources</div>
+                            <div class="compare-val">Plusieurs Go par VM (OS complet)</div>
+                        </div>
+                        <div class="compare-cell ct">
+                            <div class="compare-label ct">Ressources</div>
+                            <div class="compare-val">Quelques Mo par conteneur</div>
+                        </div>
+                    </div>
+                    <div class="compare-row">
+                        <div class="compare-cell vm">
+                            <div class="compare-label vm">Cas d'usage</div>
+                            <div class="compare-val">Isolation stricte, OS différents</div>
+                        </div>
+                        <div class="compare-cell ct">
+                            <div class="compare-label ct">Cas d'usage</div>
+                            <div class="compare-val">Microservices, CI/CD, scalabilité</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="diff-img-wrap" style="grid-column: auto">
+                <img src="diff.png" alt="Différence VM et conteneurs">
+                <span class="diff-img-label">// vm.vs.container</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="tools-section">
+    <div class="tools-inner">
+        <div class="tools-header">
+            <span class="tools-num">// 02</span>
+            <h2 class="tools-title">Outils de veille utilisés</h2>
+        </div>
+        <div class="tools-grid">
+
+            <div class="tool-card">
+                <div class="tool-img-wrap">
+                    <img src="google.png" alt="Google Alertes">
+                    <span class="tool-img-label">// google.alerts</span>
+                </div>
+                <div class="tool-body">
+                    <div class="tool-tag free">
+                        <span class="tag-dot-s"></span>
+                        Gratuit · Google
+                    </div>
+                    <div class="tool-name">Google Alertes</div>
+                    <div class="tool-text">
+                        <p>
+                            Outil gratuit accessible via un simple compte Google. Permet de créer des alertes
+                            à partir de mots-clés afin d'être notifié par e-mail dès qu'un nouveau contenu
+                            correspondant est indexé sur le web.
+                        </p>
+                        <p>
+                            Simple d'utilisation et efficace pour une veille passive sur des technologies
+                            spécifiques comme la virtualisation, Proxmox ou Ansible.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tool-card">
+                <div class="tool-img-wrap">
+                    <img src="feedly.png" alt="Feedly">
+                    <span class="tool-img-label">// feedly.rss</span>
+                </div>
+                <div class="tool-body">
+                    <div class="tool-tag rss">
+                        <span class="tag-dot-s"></span>
+                        Agrégateur RSS
+                    </div>
+                    <div class="tool-name">Feedly</div>
+                    <div class="tool-text">
+                        <p>
+                            Feedly est un agrégateur de flux RSS permettant de s'abonner aux sites dont
+                            on souhaite recevoir le contenu — journaux, blogs techniques, documentation officielle.
+                        </p>
+                        <p>
+                            Les informations apparaissent en ordre chronologique avec titre, illustration et chapô.
+                            Idéal pour automatiser sa veille et centraliser toutes les sources en un seul endroit.
+                        </p>
+                    </div>
+                </div>
             </div>
 
         </div>
-    </nav>
-
-    <div class="titre">Veille Technologique</div>
-    <div class="soustitre">Virtualisation et conteneurisation</div>
-
-
-
-    <section class="container">
-        <div class="image-box">
-            <img src="virt.png" alt="Image de virtualisation">
-        </div>
-
-        <div class="text-box">
-            <h2>Les principes</h2>
-
-            <p>
-                La <strong>virtualisation</strong> permet de diviser les ressources matérielles 
-                d’un seul ordinateur (processeurs, mémoire, stockage et autres) en plusieurs ordinateurs virtuels, 
-                appelés machines virtuelles (VM).
-            </p>
-
-            <p>
-                La <strong>conteneurisation</strong> consiste à regrouper le code logiciel avec 
-                uniquement les bibliothèques du système d’exploitation (OS) et les dépendances nécessaires 
-                pour exécuter le code afin de créer un seul exécutable léger, appelé <strong>conteneur</strong>, 
-                qui s’exécute de manière cohérente sur n’importe quelle infrastructure.
-            </p>
-        </div>
-    </section>
-
-
-    <div class="text-box2">
-        <h2>La différence entre virtualisation et conteneurisation</h2>
-
-        <p>
-            Les <strong>machines virtuelles</strong> virtualisent toute une machine jusqu’aux couches
-            matérielles, tandis que les <strong>conteneurs</strong> ne virtualisent que les couches logicielles 
-            au-dessus du niveau du système d’exploitation.
-        </p>
     </div>
+</section>
 
-    <div class="image-box2">
-        <img src="diff.png" alt="Image de virtualisation">
+<footer class="footer">
+    <div class="footer-inner">
+        <div class="footer-brand">
+            <img class="nav-avatar" src="../accueil/moi.png" alt="Logan Quaghebeur">
+            <div>
+                <div class="footer-name">Logan Quaghebeur</div>
+                <div class="footer-role">sysadmin@bts-sio ~</div>
+            </div>
+        </div>
+        <ul class="footer-links">
+            <li><a href="#">about</a></li>
+            <li><a href="#">privacy</a></li>
+            <li><a href="#">license</a></li>
+            <li><a href="#">contact</a></li>
+        </ul>
     </div>
-
-    
-    
-    <section class="outils">
-
-        <div class="text-box">
-            <h2>Google alertes</h2>
-
-            <p>
-                Cette option gratuite de google est utilisable avec un simple compte google !
-            </p>
-
-            <p>
-                Google alertes permet de créer des alertes à partir d’un mot clé. C’est un outil simple d’utilisation permettant de ce tenir informé des dernières technologies sorties.
-            </p>
-
-            <p>
-                Dans mon cas vous trouverez les principaux mots clés utilisés ici ->
-            </p>
-        </div>
-
-        <div class="image-box">
-            <img src="google.png" alt="Image de virtualisation">
-        </div>
-
-    </section>
-
-    <section class="outils">
-
-        <div class="text-box">
-            <h2>Feedly</h2>
-
-            <p>
-                Feedly est un agrégateur de flux RSS.
-            </p>
-
-            <p>
-                Cet outil permet de s’abonner à des flux RSS, il suffit pour cela de s’abonner aux sites dont on souhaite recevoir le contenu, qu’il s’agisse d’un journal ou d’un article de blog.
-            </p>
-
-            <p>
-                Feedly permet donc d’automatiser sa veille et d’avoir accès en permanence aux différentes informations que les sites internet publient au quotidien. Ces informations apparaissent dans l’ordre chronologique et sont généralement composées du titre de l’article accompagné de son illustration ainsi que du chapô
-            </p>
-        </div>
-
-        <div class="image-box">
-            <img src="feedly.png" alt="Image de virtualisation">
-        </div>
-
-    </section>
-
-
-
-
-
-
-</body>
-
-<footer class="rounded-lg shadow-sm bg-gray-900 m-4">
-    <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
-        <div class="sm:flex sm:items-center sm:justify-between">
-            <a href="https://flowbite.com/" class="flex items-center gap-x-4">
-                <img class="w-14 h-14 rounded-full" src="../accueil/moi.png" alt="Rounded avatar">
-                <span class="text-2xl font-semibold text-white">Logan Quaghebeur</span>
-            </a>
-            <ul class="flex flex-wrap items-center mb-6 text-sm font-mediumsm:mb-0 text-gray-400">
-                <li>
-                    <a href="#" class="hover:underline me-4 md:me-6">About</a>
-                </li>
-                <li>
-                    <a href="#" class="hover:underline me-4 md:me-6">Privacy Policy</a>
-                </li>
-                <li>
-                    <a href="#" class="hover:underline me-4 md:me-6">Licensing</a>
-                </li>
-                <li>
-                    <a href="#" class="hover:underline">Contact</a>
-                </li>
-            </ul>
-        </div>
-        <hr class="my-6 sm:mx-auto border-gray-700 lg:my-8" />
-        <span class="block text-sm sm:text-center text-gray-400">© 2023 <a href="https://flowbite.com/"
-                class="hover:underline">Flowbite™</a>. All Rights Reserved.</span>
+    <div class="footer-bottom">
+        <span>© 2025 Logan Quaghebeur</span>
+        <span>BTS SIO — SISR · Normandie, FR</span>
     </div>
 </footer>
 
-
+</body>
 </html>
