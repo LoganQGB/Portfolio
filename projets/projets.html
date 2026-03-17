@@ -83,6 +83,12 @@
                     <span class="tech-chip">LXC Container</span>
                     <span class="tech-chip">Linux</span>
                 </div>
+                <div class="project-actions">
+                    <button type="button" class="btn-dl doc-open" data-src="../Projet serveur Minecraft - logan Quaghebeur.pdf" data-title="Rapport de projet : Déploiement Minecraft">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"/><path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z"/></svg>
+                        wget rapport_deploiement_minecraft.pdf
+                    </button>
+                </div>
             </div>
         </div>
 
@@ -118,6 +124,12 @@
                     <span class="tech-chip tech-chip--purple">PowerShell</span>
                     <span class="tech-chip tech-chip--purple">Réplication AD</span>
                 </div>
+                <div class="project-actions">
+                    <button type="button" class="btn-dl doc-open" data-src="rapport_active_directory.pdf" data-title="Rapport de projet : Active Directory">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"/><path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z"/></svg>
+                        wget rapport_active_directory.pdf
+                    </button>
+                </div>
             </div>
         </div>
 
@@ -144,6 +156,67 @@
         <span>BTS SIO — SISR · Normandie, FR</span>
     </div>
 </footer>
+
+<div id="doc-modal" class="modal" aria-hidden="true">
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-content" role="dialog" aria-modal="true" aria-label="Visualisation du rapport">
+        <header class="modal-header">
+            <h2 class="modal-title">Rapport</h2>
+            <button type="button" class="modal-close" aria-label="Fermer">×</button>
+        </header>
+        <div class="modal-body">
+            <iframe src="" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <footer class="modal-footer">
+            <a href="#" download class="btn-dl modal-download">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"/><path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z"/></svg>
+                Télécharger
+            </a>
+        </footer>
+    </div>
+</div>
+
+<script>
+(function () {
+  const modal = document.getElementById('doc-modal');
+  const titleEl = modal.querySelector('.modal-title');
+  const iframe = modal.querySelector('iframe');
+  const downloadLink = modal.querySelector('.modal-download');
+  const closeBtn = modal.querySelector('.modal-close');
+  const backdrop = modal.querySelector('.modal-backdrop');
+
+  function openModal(src, title) {
+    titleEl.textContent = title;
+    iframe.src = src;
+    downloadLink.href = src;
+    modal.setAttribute('aria-hidden', 'false');
+    modal.classList.add('open');
+    document.body.classList.add('modal-open');
+  }
+
+  function closeModal() {
+    modal.setAttribute('aria-hidden', 'true');
+    modal.classList.remove('open');
+    iframe.src = '';
+    document.body.classList.remove('modal-open');
+  }
+
+  document.querySelectorAll('.doc-open').forEach(button => {
+    button.addEventListener('click', () => {
+      openModal(button.dataset.src, button.dataset.title);
+    });
+  });
+
+  closeBtn.addEventListener('click', closeModal);
+  backdrop.addEventListener('click', closeModal);
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && modal.classList.contains('open')) {
+      closeModal();
+    }
+  });
+})();
+</script>
 
 </body>
 </html>
