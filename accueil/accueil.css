@@ -540,6 +540,9 @@ body::before {
   text-decoration: none;
   transition: color 0.2s;
   font-family: var(--mono);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 .footer-links a:hover { color: rgba(255,255,255,0.75); }
 
