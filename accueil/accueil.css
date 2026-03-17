@@ -227,7 +227,7 @@ body::before {
   position: relative;
   z-index: 1;
   padding: 2rem 2rem 6rem;
-  background: var(--bg-alt);
+  background: var(--surface);
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
 }
@@ -409,6 +409,50 @@ body::before {
 }
 
 /* ══════════════════════════════
+   SKILLS SECTION
+══════════════════════════════ */
+.skills-section {
+  position: relative;
+  z-index: 1;
+  padding: 4rem 2rem;
+  background: var(--bg-alt);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.skills-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.skill-category {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 2px 8px rgba(15,25,35,0.05);
+}
+
+.skill-title {
+  font-family: var(--sans);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 1rem;
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 0.5rem;
+}
+
+.skill-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+/* ══════════════════════════════
    DOC SECTIONS
 ══════════════════════════════ */
 .doc-section {
@@ -451,6 +495,16 @@ body::before {
   width: 32px; height: 2px;
   background: var(--accent);
   border-radius: 2px;
+}
+
+.skills-subtitle {
+  font-family: var(--sans);
+  font-size: 1rem;
+  color: var(--text-mid);
+  margin-top: 1rem;
+  margin-bottom: 0;
+  line-height: 1.5;
+  max-width: 600px;
 }
 
 .doc-wrapper {
