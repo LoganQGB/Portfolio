@@ -277,7 +277,6 @@ body::before {
 
 @media (max-width: 900px) {
   .cards-grid { grid-template-columns: 1fr; max-width: 480px; }
-  .nav-links { display: none; }
 }
 
 .card {
@@ -818,6 +817,7 @@ body::before {
   .nav-name { font-size: 0.9rem; }
   .nav-role { font-size: 0.6rem; }
   .nav-links {
+    display: flex;
     position: fixed;
     top: 0;
     right: -100%;

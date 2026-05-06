@@ -202,7 +202,6 @@ body::before {
   .project-card.reverse { grid-template-columns: 1fr; }
   .project-card.reverse .project-img { order: -1; }
   .project-card.reverse .project-content { order: 1; }
-  .nav-links { display: none; }
 }
 
 /* Image side */
@@ -490,6 +489,7 @@ body.modal-open {
   .nav-name { font-size: 0.9rem; }
   .nav-role { font-size: 0.6rem; }
   .nav-links {
+    display: flex;
     position: fixed;
     top: 0;
     right: -100%;

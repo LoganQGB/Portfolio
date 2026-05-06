@@ -163,7 +163,6 @@ body::before {
 
 @media (max-width: 800px) {
   .topic-inner { grid-template-columns: 1fr; gap: 2rem; }
-  .nav-links { display: none; }
 }
 
 .block-label {
@@ -441,6 +440,7 @@ body::before {
   .nav-name { font-size: 0.9rem; }
   .nav-role { font-size: 0.6rem; }
   .nav-links {
+    display: flex;
     position: fixed;
     top: 0;
     right: -100%;

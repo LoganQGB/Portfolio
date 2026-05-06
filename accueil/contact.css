@@ -365,6 +365,7 @@ body::before {
   .nav-name { font-size: 0.9rem; }
   .nav-role { font-size: 0.6rem; }
   .nav-links {
+    display: flex;
     position: fixed;
     top: 0;
     right: -100%;
